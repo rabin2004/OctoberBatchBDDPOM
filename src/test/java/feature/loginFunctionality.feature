@@ -17,13 +17,13 @@
 ## (Comments)
 #Sample Feature Definition Template
 
+@Release2.0
 Feature: Login Functionality
 Valid customer should be able to login providing valid credentials.
 
+@Regression @NegativeScenario
 Scenario Outline:
-Given customer is in homepage
-And clicks on account list link
-And land in sign link page
+Given customer is in sign in page
 When enter invalid "<username>"
 And clicks continue button
 And enters invalid "<password>"

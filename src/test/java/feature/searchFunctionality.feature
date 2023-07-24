@@ -17,6 +17,7 @@
 ## (Comments)
 #Sample Feature Definition Template
 
+@Release1.0
 Feature: Search Functionality
 Customer will be able to find product using this feature
 
@@ -38,6 +39,7 @@ Customer will be able to find product using this feature
 #And clicks search button
 #Then customer should see no result error message
 
+@Regression @E2E @PositiveScenario
 Scenario Outline: Positive search funtionality data driven
 Given customer is in homepage
 When customer enter valid "<product>"
@@ -50,6 +52,7 @@ Examples:
 |apple|
 |pixel|
 
+@Regression @E2E @NegativeScenario
 Scenario Outline: Negative search funtionality test data driven
 Given customer is in homepage
 When customer enter invalid "<invalidProduct>"

@@ -22,6 +22,8 @@ public class LoginFunctionalityPage extends BaseClass{
 	WebElement loginErrorMsg;
 	@FindBy(id="auth-warning-message-box")
 	WebElement loginWarningMsg;
+	@FindBy(xpath="//form/div/div/div/h1")
+	WebElement sigInPageHeader;
 
 	public LoginFunctionalityPage() {
 		PageFactory.initElements(driver, this);
@@ -53,6 +55,10 @@ public class LoginFunctionalityPage extends BaseClass{
 	
 	public boolean validateVisibilityOfLoginErrorMsg() {
 		return loginErrorMsg.isDisplayed();
+	}
+	
+	public boolean validateSigInPageHeader() {
+		return sigInPageHeader.isDisplayed();
 	}
 
 }
